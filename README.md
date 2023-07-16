@@ -2,6 +2,7 @@
 Here you will find my portfolio following my BTS SIO option SLAM
 
 ---------- SOME SCREENSHOTS ----------
+
 --> ACCUEIL
 <img width="1280" alt="accueil" src="https://github.com/ManonHallier/Portefolio-BTS-SIO-SLAM/assets/119847929/6eb2b4b7-3ece-4285-bd0a-e6f2699c9c08">
 
