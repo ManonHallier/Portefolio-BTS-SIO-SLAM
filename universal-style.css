@@ -1,0 +1,259 @@
+  /*------------------------------------------------------------------------------------------*/
+/* ÉLÉMENTS DE CUSTOMISATION GÉNÉRALE */
+body {
+    margin-top: 3%;
+    margin-left : 10%;
+    margin-right : 10%;
+    margin-bottom : 20%;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f2039;
+    color: #F3DCF2 ;
+    text-align : justify;
+  }
+
+h1, h2 {
+color: #F4B3F0;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------------------------*/  
+/* DESIGN DE LA BARRE DE NAVIGATION */ 
+  nav {
+    background-color: #1f2039;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #F4B3F0;
+    padding-bottom: 5px;
+    margin-top: 3%;
+    margin-left : 2%;
+    margin-right : 2%;
+    margin-bottom : 1%;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #F4B3F0;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid #1f2039;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #343654;
+  }
+/*------------------------------------------------------------------------------------------*/
+/* ARRONDISSEMENT DE MA PHOTO */ 
+.photo-container {
+    float: right;
+    width: 350px; /* largeur */
+    height: 350px; /* taille */
+    border-radius: 50%; /* applique la forme circulaire */
+    overflow: hidden; /* cache le contenu dépassant de la forme circulaire */
+    margin-left: 20px; /* ajustez la marge selon vos besoins */
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* assure que l'image remplisse complètement le cercle */
+  }
+  
+  /*------------------------------------------------------------------------------------------*/
+  /* CASES INTERACTIVES QUI GROSSISSENT LORSQUE LA SOURIS PASSE DESSUS */ 
+
+  .competence {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .competence img {
+    width: 150px; /* Ajustez la taille de l'image selon vos besoins */
+  }
+  
+  .competence:hover {
+    transform: scale(1.1); /* Grossissement au passage de la souris */
+    z-index: 1;
+  }
+  
+  .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .competence:hover .description {
+    opacity: 1; /* Affichage de la description au passage de la souris */
+  }
+  
+  /*------------------------------------------------------------------------------------------*/  
+  /*DÉFILEMENT DES PHOTOS DANS LA SECTION DES PROJETS ET DES RÉALISATIONS */
+  .portfolio {
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel img {
+    scroll-snap-align: center;
+    width: 100%;
+    border-radius: 8px; /* Arrondir les bords */
+  }
+  
+  
+  .navigation {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .prev,
+  .next {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    opacity: 1;
+  }
+  
+
+
+  /*------------------------------------------------------------------------------------------*/  
+  /* ORGANISATION DES CERTIFICATIONS REÇUES */
+
+  .certifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .certification {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .certification img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* arrondir les bords */
+  }
+  
+  .caption {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+
+  /*------------------------------------------------------------------------------------------*/  
+  /* PAGE À PROPOS AVEC REDIRECTION VERS RÉSEAUX SOCIAUX */
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .social-media img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.1);
+  }
+  
+/*------------------------------------------------------------------------------------------*/  
+  /* EXPÉRIENCES PROFESSIONNELLES */
+
+  .container-experience {
+    width: 100%;
+  }
+  
+  .experience {
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column; /* Afficher les expériences en colonne */
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+    position: relative; /* Ajout d'une position relative pour la pseudo-classe */
+  }
+  
+  .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+  
+  .image img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
